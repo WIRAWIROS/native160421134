@@ -27,4 +27,9 @@
             android:name="player_name"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.ubaya.anmp_week1.resultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
 </navigation>
