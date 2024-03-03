@@ -34,38 +34,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/random1"
+            android:id="@+id/txtQuest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:layout_marginEnd="84dp"
-            android:text="0"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toStartOf="@+id/txtPlus"
-            app:layout_constraintTop_toBottomOf="@+id/txtTurn" />
-
-        <TextView
-            android:id="@+id/txtPlus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:text="+"
+            android:text="soal"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtTurn" />
-
-        <TextView
-            android:id="@+id/random2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="60dp"
-            android:text="0"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.21"
-            app:layout_constraintStart_toEndOf="@+id/txtPlus"
             app:layout_constraintTop_toBottomOf="@+id/txtTurn" />
 
         <EditText
@@ -79,7 +55,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtPlus"
+            app:layout_constraintTop_toBottomOf="@+id/txtQuest"
             app:layout_constraintVertical_bias="0.3" />
 
         <Button
