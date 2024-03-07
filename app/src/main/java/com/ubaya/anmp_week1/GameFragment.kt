@@ -30,10 +30,7 @@ class GameFragment : Fragment() {
     //akses tombol
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        num1 = kotlin.random.Random.nextInt(1, 101)
-        num2 = kotlin.random.Random.nextInt(1, 101)
-        correctAnswer = num1 + num2
-        binding.txtQuest.text = "$num1 + $num2"
+        Question()
         binding.btnJawab.setOnClickListener{
             checkAnswer()
         }
@@ -50,13 +47,18 @@ class GameFragment : Fragment() {
             Navigation.findNavController(it).navigate(action)
         }
     }
+    private fun Question(){
+        num1 = kotlin.random.Random.nextInt(1, 101)
+        num2 = kotlin.random.Random.nextInt(1, 101)
+        correctAnswer = num1 + num2
+        binding.txtQuest.text = "$num1 + $num2"
+    }
     private fun checkAnswer() {
         val playerAnswer = binding.txtAnswer.text.toString()
         if (playerAnswer.isNotEmpty()) {
             if (playerAnswer.toInt() == correctAnswer) {
                 score++
-                correctAnswer = num1 + num2
-                binding.txtQuest.text = "$num1 + $num2"
+                Question()
             } else {
                 endGame()
             }
