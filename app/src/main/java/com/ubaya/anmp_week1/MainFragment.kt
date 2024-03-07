@@ -11,6 +11,7 @@ import com.ubaya.anmp_week1.databinding.FragmentMainBinding
 class MainFragment : Fragment() {
     private lateinit var binding:FragmentMainBinding
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,6 +24,11 @@ class MainFragment : Fragment() {
     //akses tombol
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.btnSetting.setOnClickListener{
+            val action =  MainFragmentDirections.actionOptionFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
 
         binding.btnStart.setOnClickListener{
             val name = binding.txtName.text.toString()
